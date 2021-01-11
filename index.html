@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <script src="/Users/amirbouchaoui/Documents/Programs/JavaScript/tensorflow/tf.min.js"></script>
+    <script src="data.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <button id="upload-json-button" onclick="document.querySelector('#upload-json').click()">Upload JSON file</button>
+    <button id="upload-weights-button" onclick="document.querySelector('#upload-weights').click()">Upload weights file</button>
+    <button id="load-model" onclick="var model = loadModel()">Load model</button>
+    <button id="save-model" onclick="saveModel()" style="margin-top: 10px">Save model</button>
+
+    <input id="upload-json" type="file" style="display: none">
+    <input id="upload-weights" type="file" style="display: none">
+
+    <p id="colorRGB"></p>
+
+    <button class="submit" onclick="submitColor(0)" style="background-color: red">Red</button>
+    <button class="submit" onclick="submitColor(1)" style="background-color: green">Green</button>
+    <button class="submit" onclick="submitColor(2)" style="background-color: blue">Blue</button>
+    <button class="submit" onclick="submitColor(3)" style="background-color: yellow">Yellow</button>
+    <button class="submit" onclick="submitColor(4)" style="background-color: orange">Orange</button>
+    <button class="submit" onclick="submitColor(5)" style="background-color: purple">Purple</button>
+    <button class="submit" onclick="submitColor(6)" style="background-color: grey">Grey</button>
+    <button class="submit" onclick="submitColor(7)" style="background-color: black">Black</button>
+    <button class="submit" onclick="submitColor(8)" style="background-color: white">White</button>
+    <button class="submit" onclick="submitColor(9)" style="background-color: brown">Brown</button>
+    <button class="submit" onclick="submitColor(10)" style="background-color: pink">Pink</button>
+
+    <br><br>
+    <button id="finish" onclick="train()">Train</button>
+    <button onclick="cleanUp()">End</button>
+  </body>
+</html>
